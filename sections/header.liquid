@@ -2,7 +2,7 @@
 
 <div x-data="{ mobileMenuOpen: false }" class="relative bg-white">
   <div class="mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+    <div class="flex justify-between items-center py-6 md:justify-start md:gap-10">
       <!-- STORE NAME / STORE LOGO -->
       <div class="flex justify-start lg:flex-1 truncate">
         <h1 class="text-xl font-bold truncate">{{ section.settings['Logo-title'] | default: shop.name }}</h1>
@@ -19,7 +19,7 @@
       </div>
 
       <!-- NAVIGATION MENU -->
-      <nav x-data="{open:false}" class="hidden md:flex space-x-10">
+      <nav x-data="{open:false}" class="hidden md:flex gap-10">
         {% for link in main_menu_linklist %}
           {% if link.links != blank %}
             {% assign link_handle = link.handle | replace: '-', '_' %}
